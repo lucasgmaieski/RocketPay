@@ -1,0 +1,67 @@
+@use 'variables';
+@use 'mixins';
+form {
+  max-width: variables.$form-width;
+  display: grid;
+  gap: 1.6rem;
+
+  .input-wrapper {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01px;
+  text-transform: uppercase;
+  color: #e1e1e6;
+  }
+
+  input {
+  background: variables.$bg-color;
+  border: variables.$border-default;
+  border-radius: variables.$border-rd-default;
+  height: 41px;
+  padding-inline: 1.2rem;
+
+  width: 100%;
+
+  color: white;
+  text-transform: uppercase;
+  }
+
+  .flex {
+    gap: 1.4rem;
+
+    .input-wrapper {
+      flex: 1;
+    }
+  }
+
+  button {
+  margin-top: 1.6rem;
+
+  @include mixins.flex-center;
+  padding: 1.6rem 0;
+
+  background: #42d3ff;
+  border-radius: 0.6rem;
+
+  cursor: pointer;
+
+  border: none;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #121212;
+
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+  }
+}

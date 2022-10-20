@@ -41,8 +41,8 @@ body {
 
   padding: 2.8rem 6rem 4rem;
   background: variables.$bg-app;
-  border: 0.1rem solid #323238;
-  border-radius: 0.6rem;
+  border: variables.$border-default;
+  border-radius: variables.$border-rd-default;
 
   header {
     display: flex;
