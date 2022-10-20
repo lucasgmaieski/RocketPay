@@ -20,7 +20,7 @@ body {
   background: #121214;
   display: flex;
   place-items: center;
-  min-height: 100vw;
+  min-height: 100vh;
 }
 
 .flex {
@@ -147,6 +147,42 @@ form button {
 }
 form button:hover {
   filter: brightness(1.1);
+}
+
+@media (max-width: 420px) {
+  :root {
+    font-size: 50%;
+  }
+  body {
+    background: #202024;
+  }
+  body #app {
+    background: none;
+    border: none;
+  }
+  body #app .cc-bg svg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 780px) {
+  #app {
+    grid-template-areas: "A B" "C B";
+    width: fit-content;
+    max-width: fit-content;
+    padding-inline: 4.8rem;
+    grid-template-columns: 0.8fr 1fr;
+  }
+  #app header {
+    grid-area: A;
+  }
+  #app section.cc {
+    grid-area: B;
+    align-self: center;
+  }
+  #app form {
+    grid-area: C;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,49 @@
-@use 'base';
-@use 'credit-card';
-@use 'form';
+@use "base";
+@use "credit-card";
+@use "form";
 
+@media (max-width: 420px) {
+  :root {
+    font-size: 50%;
+  }
 
+  body {
+    background: #202024;
+    #app {
+      background: none;
+      border: none;
 
+      .cc-bg svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
 
+@media (min-width: 780px) {
+  #app {
+    grid-template-areas:
+      "A B"
+      "C B";
+
+    width: fit-content;
+    max-width: fit-content;
+    padding-inline: 4.8rem;
+
+    grid-template-columns: 0.8fr 1fr;
+
+    header {
+      grid-area: A;
+    }
+
+    section.cc {
+      grid-area: B;
+      align-self: center;
+    }
+
+    form {
+      grid-area: C;
+    }
+  }
+}
