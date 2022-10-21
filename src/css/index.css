@@ -123,6 +123,18 @@ form input {
   color: white;
   text-transform: uppercase;
 }
+form .nocheck {
+  border: 0.5px solid rgba(255, 0, 0, 0.5607843137);
+}
+form .nocheck:focus-visible {
+  outline: none;
+}
+form .check {
+  border: 0.5px solid rgba(28, 189, 22, 0.5607843137);
+}
+form .check:focus-visible {
+  outline: none;
+}
 form .flex {
   gap: 1.4rem;
 }

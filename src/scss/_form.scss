@@ -1,5 +1,5 @@
-@use 'variables';
-@use 'mixins';
+@use "variables";
+@use "mixins";
 form {
   max-width: variables.$form-width;
   display: grid;
@@ -11,27 +11,43 @@ form {
   }
 
   label {
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.01px;
-  text-transform: uppercase;
-  color: #e1e1e6;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.01px;
+    text-transform: uppercase;
+    color: #e1e1e6;
   }
 
   input {
-  background: variables.$bg-color;
-  border: variables.$border-default;
-  border-radius: variables.$border-rd-default;
-  height: 41px;
-  padding-inline: 1.2rem;
+    background: variables.$bg-color;
+    border: variables.$border-default;
+    border-radius: variables.$border-rd-default;
+    height: 41px;
+    padding-inline: 1.2rem;
 
-  width: 100%;
+    width: 100%;
 
-  color: white;
-  text-transform: uppercase;
+    color: white;
+    text-transform: uppercase;
   }
-
+  .nocheck {
+    border: 0.5px solid #ff00008f;
+    &:focus-visible {
+      // @extend .nocheck;
+      // border: 0.5px solid #ff00008f;
+      outline: none;
+    }
+  }
+  .check {
+    border: 0.5px solid #1cbd168f;
+    &:focus-visible {
+      // @extend .nocheck;
+      // border: 0.5px solid #1cbd168f;
+      outline: none;
+    }
+  }
+  
   .flex {
     gap: 1.4rem;
 
@@ -41,27 +57,27 @@ form {
   }
 
   button {
-  margin-top: 1.6rem;
+    margin-top: 1.6rem;
 
-  @include mixins.flex-center;
-  padding: 1.6rem 0;
+    @include mixins.flex-center;
+    padding: 1.6rem 0;
 
-  background: #42d3ff;
-  border-radius: 0.6rem;
+    background: #42d3ff;
+    border-radius: 0.6rem;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  border: none;
+    border: none;
 
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-  color: #121212;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #121212;
 
-  transition: filter 0.3s;
+    transition: filter 0.3s;
 
-  &:hover {
-    filter: brightness(1.1);
-  }
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 }
